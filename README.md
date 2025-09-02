@@ -8,7 +8,7 @@ This project demonstrates a practical pipeline:
 - 🧠 cluster embeddings to identify scenes,
 - ✍️ generate short, natural-language summaries per scene using an LLM (OpenAI).
 
----
+
 
 ## ✨ Features
 
@@ -19,7 +19,7 @@ This project demonstrates a practical pipeline:
 - Use an LLM to create short headlines and summaries for each scene.
 - Streamlit UI that shows thumbnails + timestamps + summaries.
 
----
+
 
 ## 📦 Project structure
 
@@ -35,7 +35,7 @@ video-scene-summarizer-gen-ai/
     └── summarizer.py
 ```
 
----
+
 
 ## 🛠️ Installation
 
@@ -75,7 +75,7 @@ Workflow:
 2. Configure number of scenes, samples, and press **Process**.
 3. Inspect the timeline: thumbnails + timestamps + LLM-generated summary text.
 
----
+
 
 ## ⚙️ Configuration (via `.env` or sidebar)
 
@@ -86,7 +86,7 @@ Workflow:
 - `NUM_SCENES` — default number of scene clusters used by KMeans.
 - `OPENAI_CHAT_MODEL` — model name used to produce summaries (e.g., `gpt-4o-mini`).
 
----
+
 
 ## 🧠 How it works (overview)
 
@@ -101,7 +101,7 @@ Workflow:
 9. **LLM summarization**: call Chat model to generate a headline + short summary for each scene.
 10. **UI rendering**: display thumbnails, timestamps, and summaries as a timeline.
 
----
+
 
 ## 🧩 Tips for quality
 
@@ -110,7 +110,7 @@ Workflow:
 - Use GPU and prefer `faster-whisper` + `torch` with CUDA — dramatically faster for transcription and CLIP.
 - For very long videos ( > 10 minutes ), sample fewer frames or run in a batch/offline mode to avoid memory/time issues.
 
----
+
 
 ## ⚠️ Limitations
 
@@ -118,7 +118,7 @@ Workflow:
 - LLM summaries may hallucinate if transcript text is missing or poor; check the transcript segments to verify.
 - YouTube downloads are subject to YouTube's terms of service — use responsibly and with permission where required.
 
----
+
 
 ## 🔧 Extensions & improvements
 
@@ -128,17 +128,3 @@ Workflow:
 - Add multi-lingual transcript support and subtitle export (SRT/VTT).
 - Add caching of embeddings and transcripts for re-runs.
 
----
-
-## 🧾 License
-
-MIT — use, modify, and extend.
-
----
-
-## 🙌 Acknowledgements
-
-- OpenAI (optional: Whisper, Chat)
-- Hugging Face Transformers & CLIP models
-- faster-whisper project
-- pytube, ffmpeg, pydub for media processing
